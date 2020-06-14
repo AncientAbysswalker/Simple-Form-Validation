@@ -104,13 +104,13 @@ var checkFields = (input_arr) => {
 function getFieldName(input) {
     return input.id.charAt(0).toUpperCase() + input.id.slice(1);
 }
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     if (checkFields(validation_pairs)) {
         console.log("Submit Form");
     }
 });
-email.addEventListener("focusout", function (e) {
+email.addEventListener("focusout", (e) => {
     e.preventDefault();
     if (checkEmptyField(email)) {
         showReset(email);
@@ -119,7 +119,7 @@ email.addEventListener("focusout", function (e) {
         checkValidEmail(email);
     }
 });
-username.addEventListener("focusout", function (e) {
+username.addEventListener("focusout", (e) => {
     e.preventDefault();
     if (checkEmptyField(username)) {
         showReset(username);
@@ -128,7 +128,7 @@ username.addEventListener("focusout", function (e) {
         checkValidUsername(username);
     }
 });
-password.addEventListener("focusout", function (e) {
+password.addEventListener("focusout", (e) => {
     e.preventDefault();
     if (checkEmptyField(password)) {
         showReset(password);
@@ -143,7 +143,7 @@ password.addEventListener("focusout", function (e) {
         }
     }
 });
-password2.addEventListener("focusout", function (e) {
+password2.addEventListener("focusout", (e) => {
     e.preventDefault();
     if (checkEmptyField(password2)) {
         showReset(password2);

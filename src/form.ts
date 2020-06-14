@@ -147,7 +147,7 @@ function getFieldName(input: HTMLInputElement) {
 }
 
 // Submission of form
-form.addEventListener("submit", function (e) {
+form.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (checkFields(validation_pairs)) {
@@ -156,7 +156,7 @@ form.addEventListener("submit", function (e) {
 });
 
 // On email entry, check validity
-email.addEventListener("focusout", function (e) {
+email.addEventListener("focusout", (e) => {
   e.preventDefault();
 
   if (checkEmptyField(email)) {
@@ -167,7 +167,7 @@ email.addEventListener("focusout", function (e) {
 });
 
 // On email entry, check validity
-username.addEventListener("focusout", function (e) {
+username.addEventListener("focusout", (e) => {
   e.preventDefault();
 
   if (checkEmptyField(username)) {
@@ -178,7 +178,7 @@ username.addEventListener("focusout", function (e) {
 });
 
 // On password entry, check validity
-password.addEventListener("focusout", function (e) {
+password.addEventListener("focusout", (e) => {
   e.preventDefault();
 
   if (checkEmptyField(password)) {
@@ -196,7 +196,7 @@ password.addEventListener("focusout", function (e) {
 });
 
 // On password confrim entry, check match
-password2.addEventListener("focusout", function (e) {
+password2.addEventListener("focusout", (e) => {
   e.preventDefault();
 
   if (checkEmptyField(password2)) {
