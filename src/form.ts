@@ -86,7 +86,7 @@ var checkValidEmail: InputValidation = (input: HTMLInputElement) => {
 
 // Check password is valid
 var checkValidPassword: InputValidation = (input: HTMLInputElement) => {
-  const re = /^(?=.*\d)(?!.*\s)(?=.*[A-Z]).{6,}$/; // 6 or more characters, one number, one special, one uppercase
+  const re = /^(?=.*\d)(?=.*[@$!%*#?&`~+=|_{}'";:<,.>?\/\\\-\[\]])(?!.*\s)(?=.*[A-Z]).{6,}$/; // 6 or more characters, one number, one special, one uppercase
 
   if (re.test(input.value.trim())) {
     showSuccess(input);

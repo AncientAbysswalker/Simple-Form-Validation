@@ -59,7 +59,7 @@ var checkValidEmail = (input) => {
     }
 };
 var checkValidPassword = (input) => {
-    const re = /^(?=.*\d)(?!.*\s)(?=.*[A-Z]).{6,}$/;
+    const re = /^(?=.*\d)(?=.*[@$!%*#?&`~+=|_{}'";:<,.>?\/\\\-\[\]])(?!.*\s)(?=.*[A-Z]).{6,}$/;
     if (re.test(input.value.trim())) {
         showSuccess(input);
         return true;
